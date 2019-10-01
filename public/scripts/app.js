@@ -12,7 +12,7 @@ var template = React.createElement(
   React.createElement(
     'p',
     null,
-    'This is some info'
+    'Testing JSX'
   )
 );
 var appRoot = document.getElementById('app');
