@@ -1,5 +1,53 @@
 // JSX - JavaScript XML
-var template = <div><h1>Indecision Application</h1><p>Testing JSX</p></div>;
-var appRoot = document.getElementById('app');
 
-ReactDOM.render(template, appRoot);
+const app = {
+    title: 'Indecision Application',
+    subtitle: 'This helps you make wise choices',
+    options: ['One', 'Two']
+};
+
+const template = (
+    <div>
+        <h1>{app.title}</h1>
+        {app.subtitle && <p>{app.subtitle}</p>}
+        <p>{(app.options.length > 0) ? 'Here are your options' : 'No options available'}</p>
+        <ol>
+            <li>Item One</li>
+            <li>Item Two</li>
+        </ol>
+    </div>
+);
+let count = 0;
+const addOne = () => {
+    count++;
+    //Adds one to counter
+    renderCounterApp();
+};
+
+const minusOne = () =>{
+    count--;
+    //Minus one counter
+    renderCounterApp();
+};
+
+const reset = ()=> {
+    count = 0;
+    renderCounterApp();
+};
+
+const appRoot = document.getElementById('app');
+
+const renderCounterApp = () => {
+    const templateTwo = (
+        <div>
+            <h1>Count: {count}</h1>
+            <button onClick={addOne}>+1</button>
+            <button onClick={minusOne}>-1</button>
+            <button onClick={reset}>Reset Count</button>
+        </div>
+    );
+
+    ReactDOM.render(templateTwo, appRoot);
+};
+//Initially renders counter
+renderCounterApp();
