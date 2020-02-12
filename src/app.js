@@ -3,51 +3,53 @@
 const app = {
     title: 'Indecision Application',
     subtitle: 'This helps you make wise choices',
-    options: ['One', 'Two']
+    options: []
 };
 
-const template = (
-    <div>
-        <h1>{app.title}</h1>
-        {app.subtitle && <p>{app.subtitle}</p>}
-        <p>{(app.options.length > 0) ? 'Here are your options' : 'No options available'}</p>
-        <ol>
-            <li>Item One</li>
-            <li>Item Two</li>
-        </ol>
-    </div>
-);
-let count = 0;
-const addOne = () => {
-    count++;
-    //Adds one to counter
-    renderCounterApp();
+const onFormSubmit = (e) => {
+    e.preventDefault();
+    const option = e.target.elements.option.value;
+
+    if(option){
+        //Save input text
+        app.options.push(option);
+        //Clear input
+        e.target.elements.option.value = '';
+        //Data changes
+        renderOption();
+    }
 };
 
-const minusOne = () =>{
-    count--;
-    //Minus one counter
-    renderCounterApp();
-};
-
-const reset = ()=> {
-    count = 0;
-    renderCounterApp();
+const onRemoveAll = () => {
+    app.options = [];
+    renderOption();
 };
 
 const appRoot = document.getElementById('app');
-
-const renderCounterApp = () => {
-    const templateTwo = (
+const renderOption = () =>{
+    const template = (
         <div>
-            <h1>Count: {count}</h1>
-            <button onClick={addOne}>+1</button>
-            <button onClick={minusOne}>-1</button>
-            <button onClick={reset}>Reset Count</button>
+            <h1>{app.title}</h1>
+            {app.subtitle && <p>{app.subtitle}</p>}
+            <p>{(app.options.length > 0) ? 'Here are your options' : 'No options are available'}</p>
+            <button onClick={onRemoveAll}>Remove All Options</button>
+            {
+
+            }
+            <p>{app.options.length}</p>
+            <ol>
+                <li>Item One</li>
+                <li>Item Two</li>
+                <li>Item Three</li>
+            </ol>
+            <form onSubmit={onFormSubmit}>
+                <input type="text" name="option"/>
+                <button type="submit">Add Option</button>
+            </form>
         </div>
     );
-
-    ReactDOM.render(templateTwo, appRoot);
+    ReactDOM.render(template, appRoot);
 };
-//Initially renders counter
-renderCounterApp();
+
+//Initialise render function
+renderOption();
