@@ -69,7 +69,7 @@ class AddOption extends React.Component {
         e.preventDefault();
 
         //Grab value of what is typed in input field below using "name" attr
-        const option = e.target.elements.option.value;
+        const option = e.target.elements.option.value.trim();
         if (option) {
             alert(option);
         }else{

@@ -177,7 +177,7 @@ var AddOption = function (_React$Component6) {
             e.preventDefault();
 
             //Grab value of what is typed in input field below using "name" attr
-            var option = e.target.elements.option.value;
+            var option = e.target.elements.option.value.trim();
             if (option) {
                 alert(option);
             } else {
