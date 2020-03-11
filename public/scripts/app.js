@@ -34,10 +34,10 @@ var Counter = function (_React$Component) {
             //Use try/catch for invalid json
             try {
                 var json = localStorage.getItem('count');
-                var count = JSON.parse(json);
-
-                if (count) {
-                    //Use state to return an object
+                //Returns integer
+                var count = parseInt(json, 10);
+                if (!isNaN(count)) {
+                    //Use state to implicitly return an object
                     this.setState(function () {
                         return { count: count };
                     });
