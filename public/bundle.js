@@ -1030,7 +1030,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var template = _react2.default.createElement(
   'p',
   null,
-  'TEsting 123'
+  'TEst 123'
 );
 _reactDom2.default.render(template, document.getElementById('app'));
 
