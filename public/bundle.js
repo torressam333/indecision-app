@@ -1029,22 +1029,6 @@ var _IndecisionApp = __webpack_require__(40);
 
 var _IndecisionApp2 = _interopRequireDefault(_IndecisionApp);
 
-var _AddOption = __webpack_require__(35);
-
-var _AddOption2 = _interopRequireDefault(_AddOption);
-
-var _Options = __webpack_require__(39);
-
-var _Options2 = _interopRequireDefault(_Options);
-
-var _Header = __webpack_require__(37);
-
-var _Header2 = _interopRequireDefault(_Header);
-
-var _Action = __webpack_require__(38);
-
-var _Action2 = _interopRequireDefault(_Action);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 _reactDom2.default.render(_react2.default.createElement(_IndecisionApp2.default, null), document.getElementById('app'));
