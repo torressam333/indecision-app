@@ -11,6 +11,13 @@ export default class IndecisionApp extends React.Component {
         selectedOption: undefined //No modal by default
     };
 
+    //Removes selected options state (closes modal)
+    handleRemoveOptionState = () => {
+        this.setState(() => ({
+            selectedOption: undefined
+        }));
+    };
+
     //Remove single options
     handleDeleteOption = (optionToRemove) => {
         this.setState((prevState) => ({
@@ -62,6 +69,7 @@ export default class IndecisionApp extends React.Component {
                 />
                 <OptionModal
                     selectedOption={this.state.selectedOption}
+                    handleRemoveOptionState={this.handleRemoveOptionState}
                 />
             </div>
         );
