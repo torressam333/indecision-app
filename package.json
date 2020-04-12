@@ -20,6 +20,7 @@
     "live-server": "^1.2.1",
     "node-sass": "^4.13.1",
     "react": "16.0.0",
+<<<<<<< HEAD
     "react-dom": "16.0.0",
     "react-modal": "^2.2.2",
     "sass-loader": "7.3.1",
@@ -29,5 +30,11 @@
   },
   "devDependencies": {
     "webpack": "^3.1.0"
+=======
+    "react-dom": "16.0.1",
+    "validator": "^12.2.0",
+    "webpack": "3.1.0",
+    "webpack-dev-server": "3.1.11"
+>>>>>>> ca50ee4f19f4ccbc57f756bfdf4c4e5703ef775f
   }
 }
