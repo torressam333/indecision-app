@@ -1,0 +1,12 @@
+//Widget Header
+.widget-header{
+  background: $blue;
+  color: $off-white;
+  padding: $m-size;
+  justify-content: space-between;
+  display: flex;
+}
+
+.widget-header__h3-header{
+  margin: 0;
+}
