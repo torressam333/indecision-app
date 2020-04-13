@@ -21,12 +21,12 @@
     "node-sass": "^4.13.1",
     "normalize.css": "^8.0.1",
     "react": "16.0.0",
-    "react-dom": "16.0.0",
+    "react-dom": "16.0.1",
     "react-modal": "^2.2.2",
     "sass-loader": "7.3.1",
     "style-loader": "0.18.2",
     "validator": "^12.2.0",
-    "webpack-dev-server": "2.5.1"
+    "webpack-dev-server": "3.1.11"
   },
   "devDependencies": {
     "react-dom": "16.0.1",
