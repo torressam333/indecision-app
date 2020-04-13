@@ -5,6 +5,7 @@ const Option = (props) => (
             {props.optionText}
             {/*Delete individual option*/}
             <button
+                className="button button--link"
                 onClick={(e) => {
                     props.handleDeleteOption(props.optionText);
                 }}

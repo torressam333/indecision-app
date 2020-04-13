@@ -1,3 +1,4 @@
+//Big button
 .big-button{
   background: $light-blue;
   border: none;
@@ -12,4 +13,22 @@
 
 .big-button:disabled{
   opacity: .5;
+}
+
+//Button
+.button{
+  background: $light-blue;
+  border: none;
+  border-bottom: .3rem solid darken($light-blue, 10%);
+  color: white;
+  font-weight: 500;
+  padding: $s-size;
+}
+
+//BEM modifier for button (uses -- instead of __)
+.button--link{
+  background: none;
+  border: none;
+  color: $off-white;
+  padding: 0;
 }
